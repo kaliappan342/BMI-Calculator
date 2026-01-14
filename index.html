@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="main">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+        <h2>BMI Calculator</h2>
+
+        <input type="number" id="age" placeholder="Age (18+)" min="1">
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <input type="number" id="weight" placeholder="Weight (kg)" min="1">
+        <input type="number" id="height" placeholder="Height (cm)" min="1">
+
+        <button onclick="calculateBMI()">Calculate BMI</button>
+
+        <div class="history">
+            <h3>BMI History</h3>
+            <ul id="historyList"></ul>
+            <button class="clear-btn" onclick="clearHistory()">Clear History</button>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right-panel" id="resultBox">
+        <div class="result" id="result"></div>
+
+        <div class="bar">
+            <div class="bar-fill" id="barFill"></div>
+        </div>
+
+        <div class="motivation" id="motivation"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
