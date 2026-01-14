@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+/* LEFT */
+.left-panel {
+    flex: 1;
+    padding: 30px;
+}
+
+.left-panel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+input, select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* RIGHT */
+.right-panel {
+    flex: 1;
+    padding: 30px;
+    display: none;
+    animation: slideIn 0.5s ease;
+}
+
+.result {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bar {
+    width: 100%;
+    height: 12px;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+.motivation {
+    text-align: center;
+}
+
+.motivation img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.motivation p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* HISTORY */
+.history {
+    margin-top: 20px;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+    max-height: 120px;
+    overflow-y: auto;
+}
+
+.history li {
+    background: #f7f7f7;
+    padding: 6px;
+    margin-bottom: 5px;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+.clear-btn {
+    background: #dc3545;
+    margin-top: 10px;
+}
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+}
